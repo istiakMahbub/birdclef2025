@@ -1,1 +1,3 @@
-[![Open In NBViewer](https://img.shields.io/badge/View%20in-NBViewer-orange?logo=jupyter)](https://nbviewer.org/url/[raw.githubusercontent.com/your-username/your-repo/main/your-notebook.ipynb](https://github.com/istiakMahbub/birdclef2025/blob/e774e3d4eb45f57d28ae2c2e177425545c599896/01-metadata-exploration.ipynb))
+# 📘 View the Metadata Exploration Notebook
+
+[![Open In NBViewer](https://img.shields.io/badge/Metadata%20Notebook-NBViewer-orange?logo=jupyter)](https://nbviewer.org/url/https://raw.githubusercontent.com/istiakMahbub/birdclef2025/main/01-metadata-exploration.ipynb)
