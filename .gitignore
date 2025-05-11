@@ -3,3 +3,10 @@ data/
 .DS_Store
 images/
 processed/
+10-tuning-furtherExplore.ipynb
+best_efficientnet_model.h5
+best_efficientnet_model.keras
+label_encoder.pkl
+birdclef_env/
+random_forest_model.pkl
+submission.csv
