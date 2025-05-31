@@ -13,3 +13,5 @@ submission.csv
 birdclef25-rf0v2-leaderboard.png
 label_encoder_v2.pkl
 random_forest_model_v2.pkl
+random_forest_final_model.pkl
+random_forest_model_compressed.pkl
