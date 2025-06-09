@@ -1,32 +1,35 @@
-# BirdCLEF 2025 Notebook Collection
+# BirdCLEF 2025 Notebook Pipeline
 
-This repository contains a series of Jupyter notebooks that form a simple pipeline for the [BirdCLEF 2025](https://www.kaggle.com/competitions/birdclef-2025) competition. The goal is to build a baseline system for classifying bird calls using a random forest model.
+This repository is a collection of Jupyter notebooks that walk through a baseline approach for the [BirdCLEF 2025](https://www.kaggle.com/competitions/birdclef-2025) competition. The notebooks were originally developed on Kaggle and use a Random Forest classifier trained on log-mel spectrogram features.
 
 [![Open In NBViewer](https://img.shields.io/badge/Metadata%20Notebook-NBViewer-orange?logo=jupyter)](https://nbviewer.org/github/istiakMahbub/birdclef2025/blob/main/01-metadata-exploration.ipynb)
 
 ## Notebook Overview
 
-1. **01-metadata-exploration.ipynb** – Explore taxonomy metadata.
-2. **02-loadlisten-sample.ipynb** – Load sample audio clips and listen to examples.
-3. **03-fourierTransformation-melSpectogram.ipynb** – Generate Fourier transforms and mel spectrograms.
-4. **04-denoise.ipynb** – (Optional) Denoise audio with the `noisereduce` library.
-5. **05-humanVoice-trim.ipynb** – Remove spoken words using `webrtcvad` and chunk the audio.
-6. **06-feature-extraction.ipynb** – Compute log-mel spectrogram features for each chunk.
-7. **07-featureEngineering-modelTraining.ipynb** – Perform feature engineering and train a `RandomForestClassifier`.
-8. **08-testing-pipeline.ipynb** – Test the inference pipeline on the `train_soundscapes` data.
-9. **09-inference.ipynb** – Run inference on the competition test set to produce the submission file.
+1. **01-metadata-exploration.ipynb** – Explore dataset metadata and taxonomy.
+2. **02-loadlisten-sample.ipynb** – Load sample audio with `librosa` and listen to clips.
+3. **03-fourierTransformation-melSpectogram.ipynb** – Introduce Fourier transforms and mel spectrograms.
+4. **04-denoise.ipynb** – (Optional) Experiment with audio denoising using `noisereduce`.
+5. **05-humanVoice-trim.ipynb** – Remove human speech and chunk audio into 5-second segments.
+6. **06-feature-extraction.ipynb** – Compute log-mel spectrogram features from each chunk.
+7. **07-featureEngineering-modelTraining.ipynb** – Train a `RandomForestClassifier` with the engineered features.
+8. **08-testing-pipeline.ipynb** – Run an end-to-end test on the training soundscapes.
+9. **09-inference.ipynb** – Perform final inference on the competition test set.
 
-## Environment
+## Key Points
 
-The notebooks were created on Kaggle using versions compatible with its default runtime:
+- The repository is notebook-centric; there are no standalone Python modules.
+- Environment versions used during development: **scikit-learn** `1.2.2` and **numpy** `1.23.5`.
+- The final inference notebook expects paths to the trained model and label encoder packaged as Kaggle datasets.
 
-- **scikit-learn** `1.2.2`
-- **numpy** `1.23.5`
+## Next Steps
 
-Using these versions ensures the saved model (`random_forest_model.pkl`) can be loaded without issues during inference.
+1. Run the notebooks sequentially to reproduce the baseline pipeline.
+2. Experiment with other models such as convolutional networks or transformers on the spectrograms.
+3. Consider converting repeated notebook code into Python scripts for automation.
+4. Explore techniques like cross-validation and hyperparameter tuning to improve accuracy.
 
 ## Usage
 
-1. Obtain the BirdCLEF 2025 dataset from Kaggle.
-2. Open the notebooks in order and execute each step. The final inference notebook expects paths to the trained model and label encoder provided as Kaggle datasets.
-
+1. Download the BirdCLEF 2025 dataset from Kaggle.
+2. Execute each notebook in order. After training, `09-inference.ipynb` will generate a submission file using the saved model and label encoder.
