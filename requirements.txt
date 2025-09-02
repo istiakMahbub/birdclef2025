@@ -1,0 +1,14 @@
+numpy==1.23.5
+scipy>=1.9,<1.12
+pandas>=1.5,<2.1
+scikit-learn==1.2.2
+librosa>=0.10.0,<0.11
+soundfile>=0.12
+noisereduce>=3.0
+matplotlib>=3.6,<3.9
+seaborn>=0.12,<0.13
+tqdm>=4.64
+jupyter>=1.0
+ipykernel>=6.20
+papermill>=2.5  # optional, for automated notebook runs
+nbstripout>=0.7 # optional, to strip outputs before commit

@@ -15,3 +15,7 @@ label_encoder_v2.pkl
 random_forest_model_v2.pkl
 random_forest_final_model.pkl
 random_forest_model_compressed.pkl
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
